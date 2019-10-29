@@ -58,3 +58,64 @@ let cta = document.querySelector('.cta-text h1');
 // cta.textContent = siteContent['cta']['h1'];
 
 cta.innerHTML = "DOM<br> Is<br> Awesome"
+
+document.querySelector('.cta-text button').textContent = siteContent['cta']['button'];
+
+document.querySelector('.cta img').setAttribute('src', siteContent['cta']['img-src']);
+
+//main content
+
+
+const topContentH4s = document.querySelectorAll('.top-content .text-content h4');
+const topContentPs = document.querySelectorAll('.top-content .text-content p');
+
+topContentH4s[0].textContent = siteContent['main-content']['features-h4'];
+topContentPs[0].textContent = siteContent['main-content']['features-content'];
+topContentH4s[1].textContent = siteContent['main-content']['about-h4'];
+topContentPs[1].textContent = siteContent['main-content']['about-content'];
+
+document.querySelector('.middle-img').setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+const bottomContentH4s = document.querySelectorAll('.bottom-content .text-content h4');
+const bottomContentPs = document.querySelectorAll('.bottom-content .text-content p');
+
+bottomContentH4s[0].textContent = siteContent['main-content']['services-h4'];
+bottomContentPs[0].textContent = siteContent['main-content']['services-content'];
+bottomContentH4s[1].textContent = siteContent['main-content']['product-h4'];
+bottomContentPs[1].textContent = siteContent['main-content']['product-content'];
+bottomContentH4s[2].textContent = siteContent['main-content']['vision-h4'];
+bottomContentPs[2].textContent = siteContent['main-content']['vision-content'];
+
+//contact section
+
+document.querySelector('.contact h4').textContent = siteContent['contact']['contact-h4'];
+const contactPs = document.querySelectorAll('.contact p');
+contactPs[0].textContent = siteContent['contact']['address'];
+contactPs[1].textContent = siteContent['contact']['phone'];
+contactPs[2].textContent = siteContent['contact']['email'];
+
+//footer
+
+document.querySelector('footer p').textContent = siteContent['footer']['copyright'];
+
+
+
+//-------
+
+
+
+const nav = document.querySelector('nav');
+const appendedAnchor = document.createElement('a');
+appendedAnchor.textContent = "Pricing";
+nav.appendChild(appendedAnchor);
+
+
+const prependedAnchor = document.createElement('a');
+prependedAnchor.textContent = "Home";
+nav.prepend(prependedAnchor);
+
+let updatedNavAnchor = document.querySelectorAll('nav a');
+updatedNavAnchor.forEach(a => {
+  a.style.color = "green";
+})
+
